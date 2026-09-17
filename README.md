@@ -2,6 +2,9 @@
 
 **CHO bioreactor simulation, LSTM benchmarking, and reproducible mAb forecasts.**
 
+This project is part of the **B.Tech Project (BTP)** in the **Department of
+Chemical Engineering at the Indian Institute of Technology Delhi (IIT Delhi)**.
+
 Mechanistic simulation and time-series forecasting of monoclonal antibody (mAb)
 production in a CHO cell bioreactor. This B.Tech project compares LSTM, MLP,
 ridge regression, and simple forecasting baselines on 88 simulated reactor batches.
