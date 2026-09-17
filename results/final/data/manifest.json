@@ -1,0 +1,1813 @@
+{
+  "design": {
+    "seed": 20260916,
+    "step_min": 20,
+    "window": 20,
+    "horizon": 50,
+    "stride": 5,
+    "development_end_min": 5000,
+    "duration_min": 6000
+  },
+  "features": [
+    "volume_ml",
+    "viable_cells_1e6_ml",
+    "mab_mg_L",
+    "glucose_g_L",
+    "lactate_g_L",
+    "viability_pct",
+    "temperature_K",
+    "inlet_ml_min",
+    "sample_ml_min",
+    "perfusion_ml_min",
+    "feed_glucose_g_L"
+  ],
+  "counts": {
+    "train": 48,
+    "validation": 12,
+    "calibration": 12,
+    "test": 16
+  },
+  "kinetic_parameters": {
+    "mumax": 0.153065905,
+    "ks": 0.850356543,
+    "mud": 3.95525447e-05,
+    "ypx": 6.61966255e-05,
+    "mp": 0.012086688,
+    "yxs": 2.05140571,
+    "ms": 0.000110167094,
+    "kl": 344.210432,
+    "yxl": 1.98322526,
+    "yls": 0.0933512253,
+    "kp": 0.000687871174,
+    "lacmax1": 628.0,
+    "lacmax2": 0.499990345,
+    "mlac": 1.88752322e-05,
+    "k1": 1688.90312,
+    "k2": 524.079503
+  },
+  "batches": [
+    {
+      "id": "train_000",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5932.579245092063,
+        0.5809878883523987,
+        1.3564827631605292,
+        7.457036484073272,
+        0.1844789370583472,
+        0.01485940807091114
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.031845407547692,
+        "temperature": 308.66397913951556
+      }
+    },
+    {
+      "id": "train_001",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5179.123440114014,
+        0.8191086427349463,
+        4.335244774611374,
+        6.673564185729174,
+        0.21782406544573124,
+        0.008586730131176522
+      ],
+      "operation": {
+        "inlet_flow": 1.104727778070755,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 19.079526384428824,
+        "temperature": 308.36531651944927
+      }
+    },
+    {
+      "id": "train_002",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        4891.812031827962,
+        0.6344343233122225,
+        5.82069298032418,
+        6.390360965440432,
+        0.19387692998147352,
+        0.015650949974159573
+      ],
+      "operation": {
+        "inlet_flow": 1.1286693947626476,
+        "sample_flow": 1.1286693947626476,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.24376447215508,
+        "temperature": 308.34018462460443
+      }
+    },
+    {
+      "id": "train_003",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5161.974181651691,
+        0.5808586249210478,
+        2.4068508506247683,
+        8.449078040060828,
+        0.17308584599385135,
+        0.017516491120751952
+      ],
+      "operation": {
+        "inlet_flow": 1.4730094914090381,
+        "sample_flow": 0,
+        "perfusion_flow": 1.4730094914090381,
+        "feed_glucose": 20.344174710812098,
+        "temperature": 308.6633472208134
+      }
+    },
+    {
+      "id": "train_004",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        4899.408708202098,
+        0.673632211467563,
+        3.059899933119299,
+        7.59306717920141,
+        0.25451194787494236,
+        0.019044768428821066
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.982730002983534,
+        "temperature": 308.60966842851957
+      }
+    },
+    {
+      "id": "train_005",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5903.841539309673,
+        0.5658618421293133,
+        4.087384870310665,
+        8.091829961687308,
+        0.19058385764662286,
+        0.009070524167027146
+      ],
+      "operation": {
+        "inlet_flow": 1.0736594756511482,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.38173158579321,
+        "temperature": 308.827879782647
+      }
+    },
+    {
+      "id": "train_006",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5357.278930419192,
+        0.6955002797450931,
+        0.965515018595867,
+        8.997778782501445,
+        0.2941874464287257,
+        0.009476932092285928
+      ],
+      "operation": {
+        "inlet_flow": 0.6386245451774204,
+        "sample_flow": 0.6386245451774204,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.577793097541186,
+        "temperature": 308.2292506929487
+      }
+    },
+    {
+      "id": "train_007",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5503.315913407423,
+        0.6712129428303429,
+        6.233128573961958,
+        7.0680965593219005,
+        0.14515140210257543,
+        0.009782125922550672
+      ],
+      "operation": {
+        "inlet_flow": 0.5493477104837848,
+        "sample_flow": 0,
+        "perfusion_flow": 0.5493477104837848,
+        "feed_glucose": 12.294896325063645,
+        "temperature": 308.56047332953364
+      }
+    },
+    {
+      "id": "train_008",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        6053.157380182363,
+        0.4716384405864912,
+        0.4863073732787342,
+        6.053780877959018,
+        0.26797606159933246,
+        0.004963733732386223
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 19.94447247266725,
+        "temperature": 308.33779110093093
+      }
+    },
+    {
+      "id": "train_009",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        6137.240471969816,
+        0.7073175619068821,
+        0.8486294084185211,
+        8.294204962480702,
+        0.11779498176336076,
+        0.010057720945624966
+      ],
+      "operation": {
+        "inlet_flow": 0.2776153663056671,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.80176734267661,
+        "temperature": 309.72892727437215
+      }
+    },
+    {
+      "id": "train_010",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5539.105258985804,
+        0.566830270475335,
+        7.1379437853724506,
+        6.741013801825618,
+        0.18011665199031682,
+        0.00846352337664402
+      ],
+      "operation": {
+        "inlet_flow": 0.7243683752036321,
+        "sample_flow": 0.7243683752036321,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.433792508070507,
+        "temperature": 309.1432703930598
+      }
+    },
+    {
+      "id": "train_011",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6252.440774642515,
+        0.6840234324697909,
+        7.065710287797055,
+        8.261128801509505,
+        0.16227642130138653,
+        0.013548628850311079
+      ],
+      "operation": {
+        "inlet_flow": 1.4617888438082183,
+        "sample_flow": 0,
+        "perfusion_flow": 1.4617888438082183,
+        "feed_glucose": 23.13598547288383,
+        "temperature": 309.99676143217886
+      }
+    },
+    {
+      "id": "train_012",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        6040.744276349131,
+        0.6817024161837321,
+        1.996451920260946,
+        6.983075525481373,
+        0.22500731682712227,
+        5.1079459456657755e-05
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.980194865886766,
+        "temperature": 309.17276294512254
+      }
+    },
+    {
+      "id": "train_013",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5791.033757904741,
+        0.8314702263319035,
+        2.6491604388189893,
+        8.930588329360258,
+        0.08491499460216376,
+        0.0009321822468953508
+      ],
+      "operation": {
+        "inlet_flow": 1.2823994747394794,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.48532535404431,
+        "temperature": 309.452637795759
+      }
+    },
+    {
+      "id": "train_014",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5356.104677634581,
+        0.7406084806522366,
+        3.339288154902375,
+        8.164407719622435,
+        0.10950187764946692,
+        0.010944343675829865
+      ],
+      "operation": {
+        "inlet_flow": 1.301749246107113,
+        "sample_flow": 1.301749246107113,
+        "perfusion_flow": 0,
+        "feed_glucose": 17.608690504655303,
+        "temperature": 309.98294357195573
+      }
+    },
+    {
+      "id": "train_015",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5678.180969216957,
+        0.45536803309907664,
+        6.106253604624627,
+        6.119106898632755,
+        0.2361878988204458,
+        0.01231789121133034
+      ],
+      "operation": {
+        "inlet_flow": 0.35738079239589016,
+        "sample_flow": 0,
+        "perfusion_flow": 0.35738079239589016,
+        "feed_glucose": 20.88190440824345,
+        "temperature": 308.4493876616296
+      }
+    },
+    {
+      "id": "train_016",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5205.089189869545,
+        0.7459923495743753,
+        6.665777188751762,
+        6.809510005915836,
+        0.1897475036601744,
+        0.008227379666220832
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.589719861381344,
+        "temperature": 309.2223512464976
+      }
+    },
+    {
+      "id": "train_017",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5415.44236365669,
+        0.7548491360479866,
+        1.6920469575365589,
+        7.983299458369376,
+        0.1663939246247612,
+        0.011136550070682096
+      ],
+      "operation": {
+        "inlet_flow": 0.3729283732286446,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.559786972606563,
+        "temperature": 309.6694543735704
+      }
+    },
+    {
+      "id": "train_018",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5472.047271799298,
+        0.8161937689771537,
+        2.3373189998945225,
+        8.017579323591706,
+        0.12203720362335363,
+        0.0024616877683418404
+      ],
+      "operation": {
+        "inlet_flow": 0.36966063279104905,
+        "sample_flow": 0.36966063279104905,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.342829065638234,
+        "temperature": 308.90709300294304
+      }
+    },
+    {
+      "id": "train_019",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6092.148325055221,
+        0.5527499427725644,
+        6.210532667868045,
+        7.044404537340064,
+        0.0738969542780418,
+        0.009898821180123241
+      ],
+      "operation": {
+        "inlet_flow": 0.3585228421540027,
+        "sample_flow": 0,
+        "perfusion_flow": 0.3585228421540027,
+        "feed_glucose": 19.349627293761266,
+        "temperature": 308.3032768963987
+      }
+    },
+    {
+      "id": "train_020",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        6023.581093981517,
+        0.5790335282830502,
+        1.8901263351187731,
+        7.66405192762914,
+        0.2145108485926261,
+        0.01634682176105102
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.211345372052179,
+        "temperature": 308.22706066446875
+      }
+    },
+    {
+      "id": "train_021",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5780.477768682829,
+        0.8300445969211451,
+        7.502325399514141,
+        8.205904511952227,
+        0.12263852066326252,
+        0.016786828917262315
+      ],
+      "operation": {
+        "inlet_flow": 1.0116220747021114,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 22.60265257872188,
+        "temperature": 308.9158890358217
+      }
+    },
+    {
+      "id": "train_022",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5013.791736326997,
+        0.6943974620647196,
+        6.069307169043156,
+        8.332462942120484,
+        0.09591557238816607,
+        0.0053321257429976695
+      ],
+      "operation": {
+        "inlet_flow": 0.5551734654324822,
+        "sample_flow": 0.5551734654324822,
+        "perfusion_flow": 0,
+        "feed_glucose": 17.139288217214048,
+        "temperature": 309.62777157868396
+      }
+    },
+    {
+      "id": "train_023",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6194.562455018731,
+        0.808117429945251,
+        1.170006405357924,
+        8.544116016984828,
+        0.08606182934921648,
+        0.002814608487414965
+      ],
+      "operation": {
+        "inlet_flow": 0.48304991449931617,
+        "sample_flow": 0,
+        "perfusion_flow": 0.48304991449931617,
+        "feed_glucose": 16.92935310775539,
+        "temperature": 309.4892659617903
+      }
+    },
+    {
+      "id": "train_024",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5323.57615398949,
+        0.8248181941791634,
+        3.023154186016389,
+        8.743377160955545,
+        0.21415592734443692,
+        0.004231032638951474
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.757651110686904,
+        "temperature": 308.5236616050507
+      }
+    },
+    {
+      "id": "train_025",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        6001.7166994313,
+        0.7961167385190678,
+        1.8023696600897958,
+        7.226247484487663,
+        0.08947693278955136,
+        0.013391026900261309
+      ],
+      "operation": {
+        "inlet_flow": 1.2536315945874115,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.480881076212896,
+        "temperature": 308.3040673118703
+      }
+    },
+    {
+      "id": "train_026",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        6306.780589813843,
+        0.4530242337535541,
+        3.857061806102494,
+        7.212823521491318,
+        0.1725642193179674,
+        0.005463583975875243
+      ],
+      "operation": {
+        "inlet_flow": 0.6042273178710599,
+        "sample_flow": 0.6042273178710599,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.617890872168434,
+        "temperature": 309.876959007739
+      }
+    },
+    {
+      "id": "train_027",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5119.204131119263,
+        0.6073019418418012,
+        2.378855969830499,
+        6.88009611775996,
+        0.2834926242677478,
+        0.00769950090151473
+      ],
+      "operation": {
+        "inlet_flow": 1.490037842955952,
+        "sample_flow": 0,
+        "perfusion_flow": 1.490037842955952,
+        "feed_glucose": 23.034574536094713,
+        "temperature": 308.1472182969897
+      }
+    },
+    {
+      "id": "train_028",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5241.204810507084,
+        0.5167417001847128,
+        2.948429806270515,
+        7.3804907877164245,
+        0.27854850595781533,
+        0.00536760695588178
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.103672495949343,
+        "temperature": 308.5350312076499
+      }
+    },
+    {
+      "id": "train_029",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        6423.141136018782,
+        0.7702174408998489,
+        4.542905915757443,
+        8.233476104200664,
+        0.20342378175649706,
+        0.009121327595342956
+      ],
+      "operation": {
+        "inlet_flow": 0.8096637655536806,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 14.448483258696912,
+        "temperature": 308.1480192199793
+      }
+    },
+    {
+      "id": "train_030",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5909.9315808056435,
+        0.7582346751569172,
+        1.4673762743017882,
+        8.335124472200349,
+        0.0910450103613627,
+        0.00818248536015912
+      ],
+      "operation": {
+        "inlet_flow": 1.1237134137180518,
+        "sample_flow": 1.1237134137180518,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.30199023687831,
+        "temperature": 309.8580103545573
+      }
+    },
+    {
+      "id": "train_031",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        4826.642373866786,
+        0.6432649983761964,
+        3.0971602620047474,
+        7.650695915797036,
+        0.19893616898005395,
+        0.01708153166490511
+      ],
+      "operation": {
+        "inlet_flow": 1.0048855157954373,
+        "sample_flow": 0,
+        "perfusion_flow": 1.0048855157954373,
+        "feed_glucose": 23.711930834746287,
+        "temperature": 309.52417458232316
+      }
+    },
+    {
+      "id": "train_032",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5710.241181913985,
+        0.5735019494606488,
+        6.817316666337923,
+        6.951493048143062,
+        0.09653507632143314,
+        0.008042823894723918
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.251324556172484,
+        "temperature": 308.8830732024258
+      }
+    },
+    {
+      "id": "train_033",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5849.521060085092,
+        0.796182808305117,
+        6.516207313884942,
+        7.433346055204994,
+        0.23931229578327462,
+        0.01949908043184275
+      ],
+      "operation": {
+        "inlet_flow": 0.8316052516408622,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.367968687838996,
+        "temperature": 308.71805613820044
+      }
+    },
+    {
+      "id": "train_034",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5042.463188742907,
+        0.5782423795367091,
+        6.9485949121410036,
+        8.030164560246766,
+        0.2676189552143358,
+        0.0002468735451867383
+      ],
+      "operation": {
+        "inlet_flow": 1.226655950261622,
+        "sample_flow": 1.226655950261622,
+        "perfusion_flow": 0,
+        "feed_glucose": 14.897793349959846,
+        "temperature": 309.27094695996976
+      }
+    },
+    {
+      "id": "train_035",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6158.359664719331,
+        0.7950539855527796,
+        7.492018127247281,
+        7.490756760024019,
+        0.21300083438518233,
+        0.0012428857415369185
+      ],
+      "operation": {
+        "inlet_flow": 1.3189833211655704,
+        "sample_flow": 0,
+        "perfusion_flow": 1.3189833211655704,
+        "feed_glucose": 19.094593063356164,
+        "temperature": 308.70539582696944
+      }
+    },
+    {
+      "id": "train_036",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        6068.229724848324,
+        0.725487556096411,
+        0.2921971031615289,
+        8.851513001086259,
+        0.0987418399272792,
+        0.008435945073890862
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 19.581044113291497,
+        "temperature": 308.5973778925829
+      }
+    },
+    {
+      "id": "train_037",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5281.679133115093,
+        0.799613329226629,
+        6.24492468320228,
+        6.854704645644438,
+        0.2990746820803008,
+        0.0042768763739441116
+      ],
+      "operation": {
+        "inlet_flow": 1.3416760991302377,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.750130284423584,
+        "temperature": 308.45591573259776
+      }
+    },
+    {
+      "id": "train_038",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5130.443713031147,
+        0.7998256353957223,
+        3.892863283466621,
+        8.971044397851708,
+        0.2724387499140111,
+        0.023082287737978914
+      ],
+      "operation": {
+        "inlet_flow": 1.0440525013917756,
+        "sample_flow": 1.0440525013917756,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.066006357085193,
+        "temperature": 309.9776616534568
+      }
+    },
+    {
+      "id": "train_039",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5003.3009053450305,
+        0.5903429616943385,
+        4.316155742292115,
+        8.319036804778635,
+        0.24901940587897953,
+        0.003017115179900366
+      ],
+      "operation": {
+        "inlet_flow": 0.39635505467644694,
+        "sample_flow": 0,
+        "perfusion_flow": 0.39635505467644694,
+        "feed_glucose": 22.435188191148704,
+        "temperature": 309.83768637847993
+      }
+    },
+    {
+      "id": "train_040",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        5697.712236365864,
+        0.8373003762252061,
+        1.7210190632849436,
+        7.213753262635813,
+        0.25545281687657273,
+        0.015759931251306477
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.119187823424143,
+        "temperature": 308.74450323344126
+      }
+    },
+    {
+      "id": "train_041",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5990.296653823885,
+        0.6354651209537796,
+        7.342983690060596,
+        7.731239707066509,
+        0.06966108898035688,
+        0.007150967363308368
+      ],
+      "operation": {
+        "inlet_flow": 1.099500709049119,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.0792141606668,
+        "temperature": 309.7467751158247
+      }
+    },
+    {
+      "id": "train_042",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5484.200244709511,
+        0.7135906972624062,
+        4.047253312533404,
+        6.8371089553353155,
+        0.09808215943071255,
+        0.013618770618703337
+      ],
+      "operation": {
+        "inlet_flow": 0.4254354866634858,
+        "sample_flow": 0.4254354866634858,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.218087587945309,
+        "temperature": 308.56258584987194
+      }
+    },
+    {
+      "id": "train_043",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5070.896935518579,
+        0.8121254923284009,
+        6.608401154145713,
+        8.425184598590752,
+        0.13381271818295193,
+        0.014436531538938266
+      ],
+      "operation": {
+        "inlet_flow": 0.6892937396179066,
+        "sample_flow": 0,
+        "perfusion_flow": 0.6892937396179066,
+        "feed_glucose": 16.53171438690965,
+        "temperature": 308.89952444069166
+      }
+    },
+    {
+      "id": "train_044",
+      "split": "train",
+      "mode": "batch",
+      "initial_state": [
+        6413.014856493893,
+        0.6901415720122754,
+        6.861437699010352,
+        7.205082087823634,
+        0.18162088715756441,
+        0.011252753215930167
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.712232871129274,
+        "temperature": 308.2292348060193
+      }
+    },
+    {
+      "id": "train_045",
+      "split": "train",
+      "mode": "fed_batch",
+      "initial_state": [
+        5638.688319566861,
+        0.6836046799071622,
+        3.2794031042725935,
+        6.767401758046509,
+        0.08520764103279523,
+        0.00237736020265779
+      ],
+      "operation": {
+        "inlet_flow": 1.4913242229450647,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.101811080853935,
+        "temperature": 308.08982989073127
+      }
+    },
+    {
+      "id": "train_046",
+      "split": "train",
+      "mode": "continuous",
+      "initial_state": [
+        5950.765065480648,
+        0.6038198968747099,
+        6.822126871218485,
+        6.350213948840394,
+        0.24253522077599238,
+        0.009614329378398342
+      ],
+      "operation": {
+        "inlet_flow": 0.7984966079832105,
+        "sample_flow": 0.7984966079832105,
+        "perfusion_flow": 0,
+        "feed_glucose": 22.325006494958128,
+        "temperature": 308.18290071423843
+      }
+    },
+    {
+      "id": "train_047",
+      "split": "train",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5723.600171113104,
+        0.6131433896551624,
+        5.289441434882614,
+        6.952534330554869,
+        0.23430835254680538,
+        0.0023608482469095206
+      ],
+      "operation": {
+        "inlet_flow": 0.9290448405711078,
+        "sample_flow": 0,
+        "perfusion_flow": 0.9290448405711078,
+        "feed_glucose": 14.99135524504951,
+        "temperature": 308.52512126291026
+      }
+    },
+    {
+      "id": "validation_000",
+      "split": "validation",
+      "mode": "batch",
+      "initial_state": [
+        5356.261536249242,
+        0.4876061559265514,
+        0.9943861517515158,
+        7.589951308721593,
+        0.19836095466395218,
+        0.0014554975204007512
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.543816853940541,
+        "temperature": 308.172018371745
+      }
+    },
+    {
+      "id": "validation_001",
+      "split": "validation",
+      "mode": "fed_batch",
+      "initial_state": [
+        6499.924003876475,
+        0.4796767306020869,
+        7.946996312144998,
+        8.302651196094425,
+        0.06057238932228773,
+        0.007921807218095551
+      ],
+      "operation": {
+        "inlet_flow": 1.1523894052803558,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.233954408682344,
+        "temperature": 308.4810503182568
+      }
+    },
+    {
+      "id": "validation_002",
+      "split": "validation",
+      "mode": "continuous",
+      "initial_state": [
+        5051.354764996329,
+        0.7500850765335121,
+        2.862878760742354,
+        7.683330934872805,
+        0.17364483717238227,
+        0.009070221727503073
+      ],
+      "operation": {
+        "inlet_flow": 0.261870186551849,
+        "sample_flow": 0.261870186551849,
+        "perfusion_flow": 0,
+        "feed_glucose": 12.064000300120602,
+        "temperature": 309.19558162759387
+      }
+    },
+    {
+      "id": "validation_003",
+      "split": "validation",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6330.915295891695,
+        0.8045436811975847,
+        0.09516538994232349,
+        7.428055950855703,
+        0.24127173163440788,
+        0.017807628375365238
+      ],
+      "operation": {
+        "inlet_flow": 0.4888053073663793,
+        "sample_flow": 0,
+        "perfusion_flow": 0.4888053073663793,
+        "feed_glucose": 17.706177945896787,
+        "temperature": 309.4964912065551
+      }
+    },
+    {
+      "id": "validation_004",
+      "split": "validation",
+      "mode": "batch",
+      "initial_state": [
+        6289.1263854029885,
+        0.6085228569187566,
+        0.5317666823210576,
+        7.859295918987275,
+        0.2551123828782777,
+        0.018174141453283853
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.673534889193048,
+        "temperature": 309.6773426468691
+      }
+    },
+    {
+      "id": "validation_005",
+      "split": "validation",
+      "mode": "fed_batch",
+      "initial_state": [
+        4971.353742795934,
+        0.5386684414820906,
+        6.620215783265419,
+        7.901677578060869,
+        0.200715517070297,
+        0.0010628533371486511
+      ],
+      "operation": {
+        "inlet_flow": 0.7732914540131224,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 12.21788398909267,
+        "temperature": 309.87204808536984
+      }
+    },
+    {
+      "id": "validation_006",
+      "split": "validation",
+      "mode": "continuous",
+      "initial_state": [
+        5300.284503545235,
+        0.5642632175233211,
+        7.6280700998461155,
+        7.084062950264185,
+        0.23421678092205003,
+        0.014918581006071999
+      ],
+      "operation": {
+        "inlet_flow": 1.1045535901846775,
+        "sample_flow": 1.1045535901846775,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.646326821504353,
+        "temperature": 309.23590079310685
+      }
+    },
+    {
+      "id": "validation_007",
+      "split": "validation",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5925.408115596961,
+        0.8309154234764207,
+        0.8382685759399138,
+        6.5137819601549865,
+        0.29371749016785054,
+        0.007637927784849072
+      ],
+      "operation": {
+        "inlet_flow": 0.9108538994260558,
+        "sample_flow": 0,
+        "perfusion_flow": 0.9108538994260558,
+        "feed_glucose": 19.938590948503187,
+        "temperature": 309.26156371576275
+      }
+    },
+    {
+      "id": "validation_008",
+      "split": "validation",
+      "mode": "batch",
+      "initial_state": [
+        5317.748394327725,
+        0.6042616713458543,
+        0.9824652270540115,
+        6.280574078243918,
+        0.25884717623823583,
+        0.004409779947403097
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 12.213229336704977,
+        "temperature": 308.97903400750704
+      }
+    },
+    {
+      "id": "validation_009",
+      "split": "validation",
+      "mode": "fed_batch",
+      "initial_state": [
+        5606.596545543558,
+        0.8131337889481568,
+        3.3089779902191134,
+        6.573406271770899,
+        0.19688258569903969,
+        0.0038231979374654082
+      ],
+      "operation": {
+        "inlet_flow": 1.334811036806724,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.786251753478272,
+        "temperature": 308.70370119342937
+      }
+    },
+    {
+      "id": "validation_010",
+      "split": "validation",
+      "mode": "continuous",
+      "initial_state": [
+        5240.052593360161,
+        0.6292000067091073,
+        7.634655715501863,
+        6.410093666089788,
+        0.20782237168570317,
+        0.018289536191908016
+      ],
+      "operation": {
+        "inlet_flow": 1.4259877415412674,
+        "sample_flow": 1.4259877415412674,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.907510825873505,
+        "temperature": 308.3932703725692
+      }
+    },
+    {
+      "id": "validation_011",
+      "split": "validation",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5352.275461537415,
+        0.5130632774265247,
+        1.3234171603061968,
+        8.992144390704407,
+        0.16531832640714164,
+        0.0059422874498799745
+      ],
+      "operation": {
+        "inlet_flow": 0.9998675089650362,
+        "sample_flow": 0,
+        "perfusion_flow": 0.9998675089650362,
+        "feed_glucose": 19.037035721534476,
+        "temperature": 308.45578824144224
+      }
+    },
+    {
+      "id": "calibration_000",
+      "split": "calibration",
+      "mode": "batch",
+      "initial_state": [
+        5190.303481258994,
+        0.7831156896227379,
+        1.4441352716938445,
+        6.930767986512257,
+        0.2738777278275352,
+        0.014969882695362272
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.96832661920611,
+        "temperature": 308.87865764273755
+      }
+    },
+    {
+      "id": "calibration_001",
+      "split": "calibration",
+      "mode": "fed_batch",
+      "initial_state": [
+        6376.632075085658,
+        0.45631129847137136,
+        0.13824424047108064,
+        6.965224446675925,
+        0.17732991052877567,
+        0.01011389973151387
+      ],
+      "operation": {
+        "inlet_flow": 0.5830685892428764,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 17.38821886004545,
+        "temperature": 308.7310081898173
+      }
+    },
+    {
+      "id": "calibration_002",
+      "split": "calibration",
+      "mode": "continuous",
+      "initial_state": [
+        5245.359480387449,
+        0.8189267128157525,
+        6.514518075750401,
+        7.164966048879852,
+        0.10672409870188157,
+        0.0025963813699641943
+      ],
+      "operation": {
+        "inlet_flow": 1.3814670673942537,
+        "sample_flow": 1.3814670673942537,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.198760313201117,
+        "temperature": 308.8051307681889
+      }
+    },
+    {
+      "id": "calibration_003",
+      "split": "calibration",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5793.234853502372,
+        0.6721214989779715,
+        3.0383137058758996,
+        7.306513805819808,
+        0.2739850719963897,
+        0.012884650975623132
+      ],
+      "operation": {
+        "inlet_flow": 1.4890548392110794,
+        "sample_flow": 0,
+        "perfusion_flow": 1.4890548392110794,
+        "feed_glucose": 19.87868319657448,
+        "temperature": 309.60866202636737
+      }
+    },
+    {
+      "id": "calibration_004",
+      "split": "calibration",
+      "mode": "batch",
+      "initial_state": [
+        5536.9025321882045,
+        0.8414699308775492,
+        5.017165092960826,
+        8.708399152950207,
+        0.09944807901971527,
+        0.01863821861008868
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 14.023427600929768,
+        "temperature": 308.8350886763388
+      }
+    },
+    {
+      "id": "calibration_005",
+      "split": "calibration",
+      "mode": "fed_batch",
+      "initial_state": [
+        5738.738578528421,
+        0.8377429480396767,
+        7.061899825438812,
+        7.429363413632708,
+        0.13056173844591284,
+        0.01674755330373572
+      ],
+      "operation": {
+        "inlet_flow": 0.6154324699694913,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.421518083517295,
+        "temperature": 309.1870596325513
+      }
+    },
+    {
+      "id": "calibration_006",
+      "split": "calibration",
+      "mode": "continuous",
+      "initial_state": [
+        5742.630958349459,
+        0.8405894962564794,
+        4.224494265512983,
+        6.9550279040319465,
+        0.15090310426145095,
+        0.009326376658599107
+      ],
+      "operation": {
+        "inlet_flow": 0.665603842259312,
+        "sample_flow": 0.665603842259312,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.068652717852054,
+        "temperature": 309.81154972089763
+      }
+    },
+    {
+      "id": "calibration_007",
+      "split": "calibration",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5550.82916997195,
+        0.8262096584792493,
+        3.089217789865991,
+        6.005115915756246,
+        0.16816639482546739,
+        0.011217229654405168
+      ],
+      "operation": {
+        "inlet_flow": 0.6372242749693272,
+        "sample_flow": 0,
+        "perfusion_flow": 0.6372242749693272,
+        "feed_glucose": 19.12733391538158,
+        "temperature": 309.468123110263
+      }
+    },
+    {
+      "id": "calibration_008",
+      "split": "calibration",
+      "mode": "batch",
+      "initial_state": [
+        5479.492618669535,
+        0.6795415097064131,
+        6.353094687237921,
+        6.88934328369925,
+        0.17943877338267353,
+        0.00802916534932011
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.032924480238814,
+        "temperature": 309.10879936240605
+      }
+    },
+    {
+      "id": "calibration_009",
+      "split": "calibration",
+      "mode": "fed_batch",
+      "initial_state": [
+        6299.95119609691,
+        0.6620087446705003,
+        4.569879615309871,
+        8.643757067796752,
+        0.12377750935557275,
+        0.010264529480271845
+      ],
+      "operation": {
+        "inlet_flow": 1.1184484957585208,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 12.789487965964616,
+        "temperature": 309.5979337692159
+      }
+    },
+    {
+      "id": "calibration_010",
+      "split": "calibration",
+      "mode": "continuous",
+      "initial_state": [
+        5265.184379070454,
+        0.6230692437540146,
+        0.006544384430833716,
+        7.363011137239031,
+        0.2109794256774956,
+        0.0031488524647613515
+      ],
+      "operation": {
+        "inlet_flow": 0.3436232015506827,
+        "sample_flow": 0.3436232015506827,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.991883278927888,
+        "temperature": 309.2983762676523
+      }
+    },
+    {
+      "id": "calibration_011",
+      "split": "calibration",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5528.415969157065,
+        0.6762470533666799,
+        4.805675015699227,
+        8.5800518314816,
+        0.1056834481823307,
+        0.006824335579861225
+      ],
+      "operation": {
+        "inlet_flow": 0.5519010924185102,
+        "sample_flow": 0,
+        "perfusion_flow": 0.5519010924185102,
+        "feed_glucose": 18.706741629980886,
+        "temperature": 309.3423849634096
+      }
+    },
+    {
+      "id": "test_000",
+      "split": "test",
+      "mode": "batch",
+      "initial_state": [
+        5836.205419751087,
+        0.5676794717217057,
+        2.537206219280818,
+        7.069007405966702,
+        0.1262473474775768,
+        0.00947463520118306
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.733235609094653,
+        "temperature": 309.9136508469052
+      }
+    },
+    {
+      "id": "test_001",
+      "split": "test",
+      "mode": "fed_batch",
+      "initial_state": [
+        5345.183082475778,
+        0.6629922255086355,
+        6.363194229622062,
+        6.211431360416164,
+        0.14065625064667028,
+        0.0009264118617764589
+      ],
+      "operation": {
+        "inlet_flow": 0.9267037942014451,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 15.684144051643646,
+        "temperature": 309.61211338556234
+      }
+    },
+    {
+      "id": "test_002",
+      "split": "test",
+      "mode": "continuous",
+      "initial_state": [
+        5788.53544491419,
+        0.7713297793964301,
+        0.4741893520859408,
+        7.375857683161457,
+        0.2507607746619513,
+        0.013656288564120966
+      ],
+      "operation": {
+        "inlet_flow": 0.6181851040317399,
+        "sample_flow": 0.6181851040317399,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.96027778421047,
+        "temperature": 308.1179623341118
+      }
+    },
+    {
+      "id": "test_003",
+      "split": "test",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5327.570512568682,
+        0.7839403997397089,
+        4.906530000357648,
+        7.12752790850507,
+        0.2599064065063555,
+        0.0040196059817129625
+      ],
+      "operation": {
+        "inlet_flow": 0.33069989309520964,
+        "sample_flow": 0,
+        "perfusion_flow": 0.33069989309520964,
+        "feed_glucose": 21.93120803271742,
+        "temperature": 308.3979070583367
+      }
+    },
+    {
+      "id": "test_004",
+      "split": "test",
+      "mode": "batch",
+      "initial_state": [
+        5485.770510612756,
+        0.7638090381648199,
+        0.3247948138550214,
+        7.675199628624748,
+        0.2545228037354647,
+        0.016674918650897798
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 20.87905042304387,
+        "temperature": 309.5491935188054
+      }
+    },
+    {
+      "id": "test_005",
+      "split": "test",
+      "mode": "fed_batch",
+      "initial_state": [
+        5994.5099480748795,
+        0.7769276941671772,
+        4.82078412436636,
+        6.0899903337161865,
+        0.19021286051874137,
+        0.015212915741089196
+      ],
+      "operation": {
+        "inlet_flow": 0.8512357940961597,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 17.473625756665207,
+        "temperature": 308.6128745142616
+      }
+    },
+    {
+      "id": "test_006",
+      "split": "test",
+      "mode": "continuous",
+      "initial_state": [
+        5958.888278653778,
+        0.6838217237209555,
+        1.3318470920987613,
+        8.413709626443845,
+        0.12621996275288397,
+        0.01347020720819171
+      ],
+      "operation": {
+        "inlet_flow": 1.2678109209938224,
+        "sample_flow": 1.2678109209938224,
+        "perfusion_flow": 0,
+        "feed_glucose": 14.835789260287733,
+        "temperature": 308.66371877382926
+      }
+    },
+    {
+      "id": "test_007",
+      "split": "test",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        5476.664137932176,
+        0.7343731717900976,
+        7.205454533283364,
+        6.679077163089588,
+        0.08620699593288976,
+        0.0006995470929720237
+      ],
+      "operation": {
+        "inlet_flow": 1.2452271648090862,
+        "sample_flow": 0,
+        "perfusion_flow": 1.2452271648090862,
+        "feed_glucose": 15.821700660433121,
+        "temperature": 309.4851624208661
+      }
+    },
+    {
+      "id": "test_008",
+      "split": "test",
+      "mode": "batch",
+      "initial_state": [
+        4826.392608094173,
+        0.7349130129712895,
+        3.0332392942321134,
+        7.3896941700118735,
+        0.18208732425138088,
+        0.001478687749825986
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 21.85387487270545,
+        "temperature": 308.9796349990121
+      }
+    },
+    {
+      "id": "test_009",
+      "split": "test",
+      "mode": "fed_batch",
+      "initial_state": [
+        6143.601562916536,
+        0.6893748317000243,
+        7.763589496798818,
+        7.805193810415451,
+        0.17106002964667916,
+        0.002754495782501974
+      ],
+      "operation": {
+        "inlet_flow": 1.2277283823510827,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.722473373834312,
+        "temperature": 309.59094583278466
+      }
+    },
+    {
+      "id": "test_010",
+      "split": "test",
+      "mode": "continuous",
+      "initial_state": [
+        5227.454970784752,
+        0.7075323057230537,
+        0.521108917270519,
+        6.971270190991535,
+        0.09830472770174341,
+        0.008898476531654808
+      ],
+      "operation": {
+        "inlet_flow": 0.630894862193353,
+        "sample_flow": 0.630894862193353,
+        "perfusion_flow": 0,
+        "feed_glucose": 16.770000858479342,
+        "temperature": 308.9134783523167
+      }
+    },
+    {
+      "id": "test_011",
+      "split": "test",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6017.307621136818,
+        0.7697151699921622,
+        1.5089231180147333,
+        7.630985280033803,
+        0.10539662641915652,
+        0.02235219852057234
+      ],
+      "operation": {
+        "inlet_flow": 0.5694399386756014,
+        "sample_flow": 0,
+        "perfusion_flow": 0.5694399386756014,
+        "feed_glucose": 19.327033064992033,
+        "temperature": 308.04415458775475
+      }
+    },
+    {
+      "id": "test_012",
+      "split": "test",
+      "mode": "batch",
+      "initial_state": [
+        4906.462133265166,
+        0.7208487630568774,
+        2.929534987862711,
+        6.795466162341167,
+        0.08030210511802349,
+        0.013124651913719977
+      ],
+      "operation": {
+        "inlet_flow": 0,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 18.878386590400073,
+        "temperature": 308.10309910042315
+      }
+    },
+    {
+      "id": "test_013",
+      "split": "test",
+      "mode": "fed_batch",
+      "initial_state": [
+        5837.517753395206,
+        0.7201976550428263,
+        3.7193791341685465,
+        6.247569003469525,
+        0.24336378720945476,
+        0.012725442734836029
+      ],
+      "operation": {
+        "inlet_flow": 0.3499351334331138,
+        "sample_flow": 0,
+        "perfusion_flow": 0,
+        "feed_glucose": 23.285567969733783,
+        "temperature": 309.6585112177918
+      }
+    },
+    {
+      "id": "test_014",
+      "split": "test",
+      "mode": "continuous",
+      "initial_state": [
+        6061.667859692477,
+        0.5904616242071422,
+        2.6553740111654065,
+        6.535387950183195,
+        0.07975565063501634,
+        0.004876712894714718
+      ],
+      "operation": {
+        "inlet_flow": 0.9045830880623794,
+        "sample_flow": 0.9045830880623794,
+        "perfusion_flow": 0,
+        "feed_glucose": 13.63284972869005,
+        "temperature": 308.34147990110995
+      }
+    },
+    {
+      "id": "test_015",
+      "split": "test",
+      "mode": "retained_perfusion",
+      "initial_state": [
+        6030.59875739465,
+        0.7645612004605548,
+        7.900004371349906,
+        7.839380437124598,
+        0.2703588231635867,
+        0.00991890203827849
+      ],
+      "operation": {
+        "inlet_flow": 0.9668738410955875,
+        "sample_flow": 0,
+        "perfusion_flow": 0.9668738410955875,
+        "feed_glucose": 15.032532501411364,
+        "temperature": 308.5367959045732
+      }
+    }
+  ],
+  "rejected_attempts": [],
+  "provenance": "Synthetic numerical solutions; constant controls and fixed kinetic parameters.",
+  "batches_sha256": "50108708179d467a568d1c8af467e56db58e500a7d341ad6b952ffd8931bfe47"
+}

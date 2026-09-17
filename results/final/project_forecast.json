@@ -1,0 +1,23 @@
+{
+  "model": "ridge",
+  "origin_min": 5000.0,
+  "minutes": 1000,
+  "target": "mab_mg_L",
+  "prediction_unit": "mg/L",
+  "step_min": 20,
+  "history": "data/example_batch.csv",
+  "control_assumption": "The supplied controls remain constant throughout the forecast.",
+  "outside_training_support": [
+    "mab_mg_L",
+    "glucose_g_L"
+  ],
+  "negative_predictions": 0,
+  "interval_scope": "90% nominal simultaneous batch coverage under the synthetic calibration generator; not an experimental confidence interval.",
+  "operation": {
+    "inlet_flow": 0.0,
+    "sample_flow": 0.0,
+    "perfusion_flow": 0.0,
+    "feed_glucose": 18.0,
+    "temperature": 308.0
+  }
+}

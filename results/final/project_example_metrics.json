@@ -1,0 +1,6 @@
+{
+  "rmse_mg_L": 0.1156537418851642,
+  "final_forecast_mg_L": 230.9090729,
+  "final_simulator_reference_mg_L": 230.61063902334294,
+  "role": "Illustrative default-batch continuation after model selection, not an independent experiment."
+}

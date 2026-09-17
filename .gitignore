@@ -1,0 +1,32 @@
+# Environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local editor, operating-system, and environment files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.log
+
+# Keep reproducible reference results; ignore ad-hoc experiments
+/results/*
+!/results/final/
+!/results/README.md
+!/results/simulation/
+
+# Build and distribution outputs
+build/
+dist/
+*.egg-info/
